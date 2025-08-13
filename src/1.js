@@ -1,6 +1,6 @@
 
   function loadImageFromHTML() {
-    fetch('img/0.HTML')
+    fetch('img/1.HTML')
       .then(res => res.text())
       .then(html => {
         document.getElementById('image-container').innerHTML = html;
