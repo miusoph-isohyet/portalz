@@ -1,4 +1,7 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<html>
+<head>
+<meta charset="UTF-8" />
 <script language="javascript">
 
   ///////////////////////////////////////////////////////////////
@@ -895,7 +898,7 @@
 		var num2r = num2.substring(num2.indexOf('|')+1);
 		if(num2r != '0')
 		{			
-			alert('Number is not divisible by 17 (remainder = ' + (num2r) + ').\nChange number or use other plotting method.');
+			alert('Liczba nie jest podzielna przez 17 (reszta = ' + (num2r) + ').\nZmień liczbę lub metodę rysowania.');
 			return -1;
 		}
 		else
@@ -947,7 +950,7 @@
 		document.getElementById('numTA').value = numTSRF;
 		num2Graph(numTSRF);
 	}
-	
+		
 	  //////////////////////////////////////////////////////////////////////////////////////////
 	 //   Place binary number (read from left-to-right, top-to-bottom) in pixel array        //
 	 //   and draw it. Useful to import binary "image" from Excel, Calc, *.txt file, etc.   //
@@ -1101,7 +1104,7 @@
 		document.getElementById('link2img2').style.display = 'block';
 		document.getElementById('linkWithNum').style.display = 'block';
 		document.getElementById('linkWithNum').href = '#' + document.getElementById('numTA').value.replace(/[^0-9]/g, '');
-		
+
 	}
 	
 	
@@ -1590,8 +1593,8 @@
 			bin3a[k] =  bin3a[k].split('').reverse().join('');
 		bin3o = bin3a.join('\n');
 		
-		var stepsHTML = '\n<br />\n<strong>Divided by 17:</strong><br />\n<pre>\n' + num2o + '\n</pre><br /><br />\n<strong>Binary:</strong><br />\n<pre>\n' + binO 
-					+ '\n</pre>\n<br /><br />\n<strong>Binary (as 106 columns of 17-bit numbers):</strong><br />\n<pre>\n' + bin2o + '\n</pre>\n\n<br /><br />\n<strong>Binary (as 106 columns of 17-bit numbers - all reversed):</strong><br />\n<pre>\n' + bin3o + '\n</pre>\n';
+		var stepsHTML = '\n<br />\n<strong>Podzielona przez 17:</strong><br />\n<pre>\n' + num2o + '\n</pre><br /><br />\n<strong>Dwójkowo:</strong><br />\n<pre>\n' + binO 
+					+ '\n</pre>\n<br /><br />\n<strong>Dwójkowo (z podziałem na 106 kolumn z 17-bitowymi liczbami):</strong><br />\n<pre>\n' + bin2o + '\n</pre>\n\n<br /><br />\n<strong>Dwójkowo (z podziałem na 106 kolumn z 17-bitowymi liczbami - odwrócone):</strong><br />\n<pre>\n' + bin3o + '\n</pre>\n';
 		document.getElementById('no_steps').innerHTML = stepsHTML;
 		if(document.getElementById('no_steps').style.display == 'none')
 			toggleDiv('no_steps');
@@ -1605,31 +1608,31 @@
 </head>
 
 <body>
-	<p style="text-align:center">
-		Language: <u><b>EN</b></u> <a href="toolsPL.html">PL</a>
+	<p style="text-align:right">
+		Język: <a href="tools.html">EN</a> <u><b>PL</b></u>
 	</p>
-	<h2>Tupper's Formula Tools</h2>
+	<h2>Wzór Tuppera - Narzędzia</h2>
 	<p>
-		This site:
-		</p><ul>
-			<li>Plots Tupper's formula for given <em>k</em>, where y ∈ &lt;k, k+17) and x ∈ &lt;0, 106)</li>
-			<li>Calculates <em>k</em> number for given image (graph)</li>
+		Strona ta:
+		<ul>
+			<li>Rysuje wykres dla nierówności opisanej wzorem Tuppera przy zadanej wartości <em>k</em>, gdzie y &isin; &lt;k, k+17) a x &isin; &lt;0, 106)</li>
+			<li>Wylicza wartość liczby <em>k</em> dla zadanego wykresu</li>
 		</ul>
-	<p></p>
+	</p>
 	<div id="wiki">
-		<span class="toggleButton" onclick="toggleDiv(&#39;wikiMore&#39;);">[🙂] <strong>About Tupper's (self-referential) formula</strong></span>
+		<span class="toggleButton" onclick="toggleDiv('wikiMore');">[+] <strong>O wzorze Tuppera</strong></span>
 		<div id="wikiMore" style="display:none">
-			<a href="https://en.wikipedia.org/wiki/Tupper%27s_self-referential_formula"><img id="wikiLogo" alt="Wikipedia Logo" src="data:image/png;base64,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MDAsXCJleHBvc3VyZVwiOjEwMCxcImNvbnRyYXN0XCI6MCxcInNhdHVyYXRpb25cIjowLFwiaHVlXCI6MTAwLFwid2JNb2RlXCI6LTEsXCJ3YlRlbXBlcmF0dXJlXCI6MTUyLFwidGludFwiOjAsXCJzaGFkb3dcIjowLFwiaGlnaGxpZ2h0XCI6MCxcImxpZ2h0YmFsYW5jZVwiOjEwMCxcInNoYXJwbmVzc1wiOjIwMCxcImRlZmluaXRpb25cIjoxMDAsXCJpc0JyaWdodG5lc3NJUEVcIjp0cnVlLFwiaXNFeHBvc3VyZUlQRVwiOnRydWUsXCJpc0NvbnRyYXN0SVBFXCI6dHJ1ZSxcImlzU2F0dXJhdGlvbklQRVwiOnRydWV9IiwiZWZmZWN0VmFsdWUiOiJ7XCJmaWx0ZXJJbmRpY2F0aW9uXCI6NDEzMixcImZpbHRlclR5cGVcIjowLFwiYWxwaGFWYWx1ZVwiOjEwMH0iLCJpc0JsZW5kaW5nIjpmYWxzZSwiaXNOb3RSZUVkaXQiOmZhbHNlLCJzZXBWZXJzaW9uIjoiMTUwMTAwIiwibmRlVmVyc2lvbiI6MSwicmVTaXplIjo0LCJpc1NjYWxlQUkiOmZhbHNlLCJyb3RhdGlvbiI6MSwiYWRqdXN0bWVudFZhbHVlIjoie1wibUNyb3BTdGF0ZVwiOjEzMTA3Nn0iLCJpc0FwcGx5U2hhcGVDb3JyZWN0aW9uIjpmYWxzZSwiaXNOZXdSZUVkaXRPbmx5IjpmYWxzZSwiaXNEZWNvUmVFZGl0T25seSI6ZmFsc2V9AACiCxgAAABDb3B5X0F2YWlsYWJsZV9FZGl0X0luZm97Im9yaWdpbmFsUGF0aCI6IlwvZGF0YVwvc2VjXC9waG90b2VkaXRvclwvMFwvOTRmNzcyOTg5MzUwNWI3M2I5MzYwZjUxYzY3MDc0Y2Y0NGQzMWEwOTZmMjUwODg2OTljYTI5MGZhMzljY2VkMF8xMzQ0NC5wbmciLCJyZXByZXNlbnRhdGl2ZUZyYW1lTG9jIjotMSwic3RhcnRNb3Rpb25WaWRlbyI6LTEsImVuZE1vdGlvblZpZGVvIjotMSwiaXNNb3Rpb25WaWRlb011dGUiOmZhbHNlLCJpc1RyaW1Nb3Rpb25WaWRlbyI6ZmFsc2UsImNsaXBJbmZvVmFsdWUiOiJ7XCJtQ2VudGVyWFwiOjAuNSxcIm1DZW50ZXJZXCI6MC41LFwibVdpZHRoXCI6MSxcIm1IZWlnaHRcIjoxLFwibVJvdGF0aW9uXCI6MCxcIm1Sb3RhdGVcIjowLFwibUhGbGlwXCI6MCxcIm1WRmxpcFwiOjAsXCJtUm90YXRpb25FZmZlY3RcIjowLFwibVJvdGF0ZUVmZmVjdFwiOjAsXCJtSEZsaXBFZmZlY3RcIjowLFwibVZGbGlwRWZmZWN0XCI6MCxcIm1Ib3pQZXJzcGVjdGl2ZVwiOjAsXCJtVmVyUGVyc3BlY3RpdmVcIjowfSIsInRvbmVWYWx1ZSI6IntcImJyaWdodG5lc3NcIjoxMDAsXCJleHBvc3VyZVwiOjEwMCxcImNvbnRyYXN0XCI6MCxcInNhdHVyYXRpb25cIjowLFwiaHVlXCI6MTAwLFwid2JNb2RlXCI6LTEsXCJ3YlRlbXBlcmF0dXJlXCI6MTUyLFwidGludFwiOjAsXCJzaGFkb3dcIjowLFwiaGlnaGxpZ2h0XCI6MCxcImxpZ2h0YmFsYW5jZVwiOjEwMCxcInNoYXJwbmVzc1wiOjIwMCxcImRlZmluaXRpb25cIjoxMDAsXCJpc0JyaWdodG5lc3NJUEVcIjp0cnVlLFwiaXNFeHBvc3VyZUlQRVwiOnRydWUsXCJpc0NvbnRyYXN0SVBFXCI6dHJ1ZSxcImlzU2F0dXJhdGlvbklQRVwiOnRydWV9IiwiZWZmZWN0VmFsdWUiOiJ7XCJmaWx0ZXJJbmRpY2F0aW9uXCI6NDEzMixcImZpbHRlclR5cGVcIjowLFwiYWxwaGFWYWx1ZVwiOjEwMH0iLCJpc0JsZW5kaW5nIjpmYWxzZSwiaXNOb3RSZUVkaXQiOmZhbHNlLCJzZXBWZXJzaW9uIjoiMTUwMTAwIiwibmRlVmVyc2lvbiI6MSwicmVTaXplIjo0LCJpc1NjYWxlQUkiOmZhbHNlLCJyb3RhdGlvbiI6MSwiYWRqdXN0bWVudFZhbHVlIjoie1wibUNyb3BTdGF0ZVwiOjEzMTA3Nn0iLCJpc0FwcGx5U2hhcGVDb3JyZWN0aW9uIjpmYWxzZSwiaXNOZXdSZUVkaXRPbmx5IjpmYWxzZSwiaXNEZWNvUmVFZGl0T25seSI6ZmFsc2V9AAChCxYAAABPcmlnaW5hbF9QYXRoX0hhc2hfS2V5MDkxYzE1ZTU3ODk3NTk3Y2I2MmQzZTk2YmE5MGFhMmYyYjhkYzRkNGVlNzI4ZjI2YjZmMzQxYmE0NjVlODAzNy8xMzQ0NFNFRkhrAAAAAwAAAAAAoQumCQAAoQQAAAAAogsFBQAAoQQAAAAAoQtkAAAAZAAAADAAAABTRUZU"></a>
+			<a href="https://en.wikipedia.org/wiki/Tupper%27s_self-referential_formula"><img id="wikiLogo" alt="Wikipedia Logo" src="data:image/jpg;base64,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"/></a>
 			<div style="float: left;">
-			<p>Tupper's self-referential formula is a formula defined by Jeff Tupper that, when graphed in two dimensions <br>
-				at a very specific location in the plane (...) visually reproduces the formula itself.<br>
-				<em>// Actually, it reproduces all possible images that are 106 pixels wide and 17 pixels high.</em><br><br>
-			The formula is an <img src="data:text/plain;base64,KOCfj4zivIjwn46K"><a href="https://en.wikipedia.org/wiki/Inequality_(mathematics)" title="Inequality (mathematics)">inequality</a> defined by:</p>
+			<p>Wzór Tuppera, wymyślony przez Jeffa Tuppera, posiada taką właściwość, że jego wykres,<br />
+				narysowany w odpowiednim punkcie, przedstawia tenże wzór.<br />
+				<em>// W rzeczywistości przedstawia wszystkie możliwe obrazy o wymiarach 106 x 17 pikseli.</em><br /><br />
+			Wzór ten jest określony przy pomocy następującej <a href="https://pl.wikipedia.org/wiki/Nier%C3%B3wno%C5%9B%C4%87" title="Nierówność">nierówności</a>:</p>
 
-					<img id="tuppersFormula" alt="{1\over 2} &lt; \left\lfloor \mathrm{mod}\left(\left\lfloor {y \over 17} \right\rfloor 2^{-17 \lfloor x \rfloor - \mathrm{mod}(\lfloor y\rfloor, 17)},2\right)\right\rfloor," src="data:image/bmp;base64,Qk1iCwAAAAAAADYEAAAoAAAAagAAABEAAAABAAgAAAAAACwHAAAAAAAAAAAAAAABAAAAAAAAAAAAAAEBAQACAgIAAwMDAAQEBAAFBQUABgYGAAcHBwAICAgACQkJAAoKCgALCwsADAwMAA0NDQAODg4ADw8PABAQEAAREREAEhISABMTEwAUFBQAFRUVABYWFgAXFxcAGBgYABkZGQAaGhoAGxsbABwcHAAdHR0AHh4eAB8fHwAgICAAISEhACIiIgAjIyMAJCQkACUlJQAmJiYAJycnACgoKAApKSkAKioqACsrKwAsLCwALS0tAC4uLgAvLy8AMDAwADExMQAyMjIAMzMzADQ0NAA1NTUANjY2ADc3NwA4ODgAOTk5ADo6OgA7OzsAPDw8AD09PQA+Pj4APz8/AEBAQABBQUEAQkJCAENDQwBEREQARUVFAEZGRgBHR0cASEhIAElJSQBKSkoAS0tLAExMTABNTU0ATk5OAE9PTwBQUFAAUVFRAFJSUgBTU1MAVFRUAFVVVQBWVlYAV1dXAFhYWABZWVkAWlpaAFtbWwBcXFwAXV1dAF5eXgBfX18AYGBgAGFhYQBiYmIAY2NjAGRkZABlZWUAZmZmAGdnZwBoaGgAaWlpAGpqagBra2sAbGxsAG1tbQBubm4Ab29vAHBwcABxcXEAcnJyAHNzcwB0dHQAdXV1AHZ2dgB3d3cAeHh4AHl5eQB6enoAe3t7AHx8fAB9fX0Afn5+AH9/fwCAgIAAgYGBAIKCggCDg4MAhISEAIWFhQCGhoYAh4eHAIiIiACJiYkAioqKAIuLiwCMjIwAjY2NAI6OjgCPj48AkJCQAJGRkQCSkpIAk5OTAJSUlACVlZUAlpaWAJeXlwCYmJgAmZmZAJqamgCbm5sAnJycAJ2dnQCenp4An5+fAKCgoAChoaEAoqKiAKOjowCkpKQApaWlAKampgCnp6cAqKioAKmpqQCqqqoAq6urAKysrACtra0Arq6uAK+vrwCwsLAAsbGxALKysgCzs7MAtLS0ALW1tQC2trYAt7e3ALi4uAC5ubkAurq6ALu7uwC8vLwAvb29AL6+vgC/v78AwMDAAMHBwQDCwsIAw8PDAMTExADFxcUAxsbGAMfHxwDIyMgAycnJAMrKygDLy8sAzMzMAM3NzQDOzs4Az8/PANDQ0ADR0dEA0tLSANPT0wDU1NQA1dXVANbW1gDX19cA2NjYANnZ2QDa2toA29vbANzc3ADd3d0A3t7eAN/f3wDg4OAA4eHhAOLi4gDj4+MA5OTkAOXl5QDm5uYA5+fnAOjo6ADp6ekA6urqAOvr6wDs7OwA7e3tAO7u7gDv7+8A8PDwAPHx8QDy8vIA8/PzAPT09AD19fUA9vb2APf39wD4+PgA+fn5APr6+gD7+/sA/Pz8AP39/QD+/v4A////ACIiIiIiIiIi////IiIiIiIiIiIiIiIiIiIiIiL/Iv///yIi////IiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIi/yL///8AACIiIiIiIiIi/yIiIiIiIiIiIiIiIiIiIiIiIiL/Iv8iIiIiIiL/IiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIi/yIiIv8AAP///yIiIiIi/yIiIiIiIiIiIiIiIiIiIiIiIv8iIv8i/yL/IiL/IiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIv8iIv8AAP8iIiIiIiIi/yIiIiIiIiIiIiIiIiIiIiIiIv8iIv8i/yL/IiL/IiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIi/yIiIiIiIv8iIv8AACL/IiIiIiIi/yIiIiIiIiIiIiIiIiIiIiIiIv8iIv8i/yIi/yL/IiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIv8iIiIiIv8iIv8AACIi/yIiIiIi/yIiIiIiIiIiIiIiIiIiIiIi/yIiIv8i/yIi/yL/IiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIv8iIiIiIiL/Iv8AAP//IiIiIv8i/yL/Iv8i/yIi//8iIiL///8i/yIiIv8i/yL//yL/Iv////8iIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIi/////yL/Iv8AACIiIiIi/yIi/yL/Iv8i/yL/IiL/Iv8iIv8i/yIiIv8iIiIiIiL/Iv8iIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIi/yIiIiL/Iv8AAP///yL/IiIi/yL/Iv8i/yL/IiL/Iv8iIv8i/yIiIv8i/////yL/IiL/IiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIv8iIiL/Iv8AACIiIiIi/yIi/yL//yL/IiIi//8iIiL///8i/yIiIv8iIiIiIiL/IiIi/yIiIiIiIiIi////Iv///yIiIiIiIiIiIiIiIiIiIiIiIiL/Iv///yL///8i/yIiIiIiIiL/IiIiIiL/IiL/Iv8AAP///yIiIv8i/yIiIiIiIiIiIiIiIiIiIv8i/yIiIv8iIv8iIiL/Iv8iIv8iIiIiIiIi/yIiIiIi/yIiIiIiIiIiIiIiIiIiIiIiIiL/Iv8iIiIiIv8iIv8iIiIiIiL/IiIi/yIi/yL/Iv8AACL/IiIiIiIi/yIiIiIiIiIiIiIiIiIiIv8i/yIiIv8iIiL/IiL/IiL//yIiIiIiIiIi/yIiIiIi/yIiIiIiIiIiIiIiIiIiIiIiIv8iIv8i/yIiIv8iIv8iIiIiIiIi/yIiIv//IiL/Iv8AACL/IiIiIiIi/yIiIiIiIiIiIiIiIiIiIiIiIv8iIv8iIv8i/yL/IiIiIiIiIv8i/yIi/yL/Iv8i/yIiIiL/Iv8i/yL///8i////Iv8iIv8iIv8iIv8iIiIi/yL/IiIi/yIiIiIiIv8iIv8AACL/IiIiIiIi/yIiIiIiIiIiIiIiIiIiIiIiIv8iIv8iIv8i/yL/IiIiIiIiIv8i/yIi/yIi/yIi/yIiIiL/Iv8i/yL/Iv8i/yL/Iv8iIv8i/yL/Iv8iIiIi/yL/IiIi/yIiIiIiIv8iIv8AAP//IiIiIiIi/yIiIiIiIiIiIiIiIiIiIiIiIv8iIv8iIiIiIiL/IiIiIv//Iv8iIv8i/yL/Iv8i/yL//yL/////IiL///8i////Iv8iIv8i/yL/Iv8iIiIi/yIi/yIi/yIiIiIiIv8iIv8AACIiIiIiIiIi/yIiIiIiIiIiIiIiIiIiIiIiIiL/Iv8iIiIiIiL/IiIiIiIiIv8iIv8i/yIiIiIi/yIiIiIiIiIiIiIiIiIiIiL/IiL/Iv8iIiIiIv8iIiIi/yIi/yL/IiIiIiIi/yIiIv8AACIiIiIiIiIi/yIiIiIiIiIiIiIiIiIiIiIiIiL/IiIiIiIiIiIiIiIiIiIiIv8i//8i/yIiIiIi/yIiIiIiIiIiIiIiIiIiIiL/IiL/Iv8iIiIiIv8iIiIi/yL//yL/IiIiIiIi/yIiIv8AAA==">
-			<p>where ⌊ • ⌋ denotes the <a href="https://en.wikipedia.org/wiki/Floor_and_ceiling_functions" title="Floor and ceiling functions">floor function</a>, and <em>mod</em> is the <a href="https://en.wikipedia.org/wiki/Modulo_operation" title="Modulo operation">modulo operation</a>.<br><br>
-				<a href="https://en.wikipedia.org/wiki/Tupper%27s_self-referential_formula">Read more on Wikipedia...</a><br>
-				<a href="https://www.youtube.com/watch?v=_s5RFgd59ao">Watch "Numberphile" episode about <em>The 'Everything' Formula</em> (yes, axes directions are wrong...)</a>
+					<img id="tuppersFormula" alt="{1\over 2} &lt; \left\lfloor \mathrm{mod}\left(\left\lfloor {y \over 17} \right\rfloor 2^{-17 \lfloor x \rfloor - \mathrm{mod}(\lfloor y\rfloor, 17)},2\right)\right\rfloor," src="data:image/png;base64,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" />
+			<p>gdzie &#8970; &bull; &#8971; oznacza <a href="https://pl.wikipedia.org/wiki/Pod%C5%82oga_i_sufit" title="Podłoga i sufit">funkcję podłoga</a>, a <em>mod</em> to <a href="https://pl.wikipedia.org/wiki/Modulo" title="Modulo">operacja modulo</a>.<br /><br />
+				<a href="https://en.wikipedia.org/wiki/Tupper%27s_self-referential_formula">Więcej na Wikipedii... [EN]</a><br />
+				<a href="https://www.youtube.com/watch?v=_s5RFgd59ao">Odcinek na kanale YT "Numberphile" poświęcony <em>Wzorowi na wszystko</em> (tylko w wykresach pomylili się przy zwrotach osi XY)</a>
 			</p>
 				
 			</div>
@@ -1637,103 +1640,92 @@
 		</div>
 	</div>
 
-	<h3>Graph</h3>
+	<h3>Wykres</h2>
 	<div id="graphDiv">
 		<canvas id="canvas" width="980" height="320" tabindex="0">
-			Your browser does not support the HTML 5 Canvas. 
+			Twoja przeglądarka nie obsługuje HTML 5 Canvas. 
 		</canvas>
 		<div id="graphOptionsDiv">
-			<span class="toggleButton" onclick="toggleDiv(&#39;graphOptions&#39;);">[+] <strong>Graph options and functions</strong></span>
+			<span class="toggleButton" onclick="toggleDiv('graphOptions');">[+] <strong>Funkcje i opcje wykresu</strong></span>
 			<div id="graphOptions" style="display:none">
-				<p style="margin: 0px;float:left;">Choose color for the first mouse button: </p>
+				<p style="margin: 0px;float:left;">Wybierz kolor pierwszego przycisku myszy: </p>
 				<div style="margin: 0 10px;float:left;width:16px;height:16px;background:black;border-width:2px;border-color:#F00;border-style:solid" id="go_black" onclick="chooseColor(1)"></div>
 				<div style="margin: 0 10px;float:left;width:16px;height:16px;background:white;border-width:2px;border-color:#00F;border-style:solid" id="go_white" onclick="chooseColor(0)"></div>
 				<div style="clear: both"></div>
-				<input type="checkbox" id="go_invertAxes" onchange="invertAxes();"> <label for="go_invertAxes">Invert axes</label><br>
-				<input type="button" id="go_invertGraph" onclick="invertGraph()" value="Invert graph (image)"><br>
-				<input type="button" id="go_negative" onclick="negative()" value="Negative"> (white/black → black/white)<br>
-				<input type="button" id="go_reset" onclick="resetGraph()" value="Reset graph (clear)"> <br>
-				<input type="button" id="go_moveLeft1U" onclick="moveLeft()" value="←
-Move graph left (1 unit)">
-				<input type="button" id="go_moveRight1U" onclick="moveRight()" value="→
-Move graph right (1 unit)">
-				<input type="button" id="go_moveUp1U" onclick="moveUp()" value="↑
-Move graph up (1 unit)">
-				<input type="button" id="go_moveDown1U" onclick="moveDown()" value="↓
-Move graph down (1 unit)"> <br>
-				<input type="button" id="go_moveLeftMax" onclick="moveMaxLeft()" value="|←
-Move graph max to left">
-				<input type="button" id="go_moveRightMax" onclick="moveMaxRight()" value="→|
-Move graph max to right"> Produces smaller 'k' number (move right when axes are inverted, left otherwise)<br>
-				<input type="button" id="go_flipX" onclick="flipImageX()" value="Flip vertically (around local X axis)">
-				<input type="button" id="go_flipX" onclick="flipImageY()" value="Flip horizontally (around local Y axis)"> <br>
-				<input type="button" id="go_drawTSRF" onclick="drawTSRF(false)" value="Load and plot Tupper&#39;s self-referential formula">
-				<input type="button" id="go_drawTSRF_rev" onclick="drawTSRF(true)" value="Load and plot Tupper&#39;s self-referential formula (reversed axes)"><br>
+				<input type="checkbox" id="go_invertAxes" onchange="invertAxes();" /> <label for="go_invertAxes">Odwróć osie</label><br />
+				<input type="button" id="go_invertGraph" onclick="invertGraph()" value="Odwróć wykres (obraz)"/><br />
+				<input type="button" id="go_negative" onclick="negative()" value="Negatyw"/> (czarno-białe &rarr; biało-czarne)<br />
+				<input type="button" id="go_reset" onclick="resetGraph()" value="Wyczyść wykres"/> <br />
+				<input type="button" id="go_moveLeft1U" onclick="moveLeft()" value="&larr;&#x00A;Przesuń wykres w lewo (o 1 pole)"/>
+				<input type="button" id="go_moveRight1U" onclick="moveRight()" value="&rarr;&#x00A;Przesuń wykres w prawo (o 1 pole)"/>
+				<input type="button" id="go_moveUp1U" onclick="moveUp()" value="&uarr;&#x00A;Przesuń wykres w górę (o 1 pole)"/>
+				<input type="button" id="go_moveDown1U" onclick="moveDown()" value="&darr;&#x00A;Przesuń wykres w dół (o 1 pole)"/> <br />
+				<input type="button" id="go_moveLeftMax" onclick="moveMaxLeft()" value="|&larr;&#x00A;Przesuń wykres maksymalnie w lewo"/>
+				<input type="button" id="go_moveRightMax" onclick="moveMaxRight()" value="&rarr;|&#x00A;Przesuń wykres maksymalnie w prawo"/> Pozwala uzyskać mniejszą liczbę 'k' (przesuń do prawej, gdy osie są odwrócone, do lewej w przeciwnym razie)<br />
+				<input type="button" id="go_flipX" onclick="flipImageX()" value="Odbij w pionie (wokół lokalnej osi X)"/>
+				<input type="button" id="go_flipX" onclick="flipImageY()" value="Odbij w poziomie (wokół lokalnej osi Y)"/> <br />
+				<input type="button" id="go_drawTSRF" onclick="drawTSRF(false)" value="Załaduj i narysuj wzór Tuppera"/>
+				<input type="button" id="go_drawTSRF_rev" onclick="drawTSRF(true)" value="Załaduj i narysuj wzór Tuppera (odwrócone osie)"/><br />
 				<fieldset>
-					<legend>Plot method:</legend>
-					<input type="radio" id="go_smartPlot" name="plotMethod" value="go_smartPlot" checked="">Smart - plot graph using knowledge of how Tupper's formula work<br>
-					<input type="radio" id="go_computeEachUnit" name="plotMethod" value="go_computeEachUnit">Unit-precise - plot graph calculating value for each square unit (very slow, might take a few minutes and freeze browser for a while, better use "Smart" method instead)<br>
-					<input type="radio" id="go_computeEachPixel" name="plotMethod" value="go_computeEachPixel">Pixel-precise - plot graph calculating value for each pixel (cheating, because thanks to floor function and small optimization all calculations are the same as for previous option)<br>
+					<legend>Metoda rysowania:</legend>
+					<input type="radio"  id="go_smartPlot" name="plotMethod" value="go_smartPlot" checked />Inteligentna - rysuje z użyciem wiedzy, jak działa wzór Tuppera<br />
+					<input type="radio"  id="go_computeEachUnit" name="plotMethod" value="go_computeEachUnit" />Całkowita - kreśli wykres wyliczając wartości dla liczb całkowitych (b. powolna, może zawiesić przeglądarkę na kilka minut, lepiej używać "inteligentnej" metody)<br />
+					<input type="radio"  id="go_computeEachPixel" name="plotMethod" value="go_computeEachPixel" />Pikselowa - oblicza wartość dla każdego piksela (oszukuje, bo dzięki zastosowanym we wzorze zaokrągleniom w dół, po drobnej optymalizacji nie różni się od poprzedniej metody)<br />
 				</fieldset>
 			</div>
 		</div>
 	</div>
 	
 	<div id="buttonsDiv">
-		<input type="button" onclick="document.getElementById(&#39;numTA&#39;).value=graph2Num()" value="Graph to number 
-￬"> <!-- &#8681; -->
-		<input type="button" onclick="plotGraph()" value="Number to graph 
-￪"> <!-- &#8679; -->
+		<input type="button" onclick="document.getElementById('numTA').value=graph2Num()" value="Liczba z wykresu &#x00A;&#65516;" /> <!-- &#8681; -->
+		<input type="button" onclick="plotGraph()" value="Wykres dla liczby &#x00A;&#65514;" /> <!-- &#8679; -->
 	</div>
-	<h3>Number</h3>
+	<h3>Liczba</h2>
 	<div id="numberDiv">
 		<textarea id="numTA"></textarea>
 		<div id="numberOptionsDiv">
-			<span class="toggleButton" onclick="toggleDiv(&#39;numberOptions&#39;);">[+] <strong>Number options and functions</strong></span>
+			<span class="toggleButton" onclick="toggleDiv('numberOptions');">[+] <strong>Funkcje i opcje dot. liczby</strong></span>
 			<div id="numberOptions" style="display:none">
-				<input type="button" id="no_separateThousands" onclick="separateThousands()" value="Separate thousands">
-				<input type="button" id="no_removeNonNumeric" onclick="removeNonNumeric()" value="Remove all non numeric characters">
-				<input type="button" id="no_clearNum" onclick="clearNum()" value="Clear number field"><br>
-				<input type="button" id="no_randomNum" onclick="document.getElementById(&#39;numTA&#39;).value = randomBN17(false)" value="Generate random number">
-				<input type="button" id="no_randomNumPlot" onclick="var rbn17 = randomBN17(false); document.getElementById(&#39;numTA&#39;).value = rbn17; num2Graph(rbn17)" value="Generate random number and plot it">
-				<input type="button" id="no_randomNumPlot1802" onclick="var rbn17 = randomBN17(true); document.getElementById(&#39;numTA&#39;).value = rbn17; num2Graph(rbn17)" value="Generate random 1802 bits long number and plot it"><br>
-				<input type="button" onclick="bin2arr()" value="Binary &#39;image&#39; to graph 
-￪"> <!-- &#8679; --> Transform binary number (17 rows of 106 binary digits) into graph. Useful to import binary "image" from Excel, Calc, *.txt file, etc.<br>
-				<input type="button" id="no_showSteps" onclick="showSteps()" value="Calculate intermediate values for number above"><br><br>
+				<input type="button" id="no_separateThousands" onclick="separateThousands()" value="Rozdziel tysiące"/>
+				<input type="button" id="no_removeNonNumeric" onclick="removeNonNumeric()" value="Usuń wszystkie nieliczbowe znaki"/>
+				<input type="button" id="no_clearNum" onclick="clearNum()" value="Wyczyść pole liczbowe"/><br />
+				<input type="button" id="no_randomNum" onclick="document.getElementById('numTA').value = randomBN17(false)" value="Wygeneruj losową liczbę"/>
+				<input type="button" id="no_randomNumPlot" onclick="var rbn17 = randomBN17(false); document.getElementById('numTA').value = rbn17; num2Graph(rbn17)" value="Wygeneruj losową liczbę i narysuj ją"/>
+				<input type="button" id="no_randomNumPlot1802" onclick="var rbn17 = randomBN17(true); document.getElementById('numTA').value = rbn17; num2Graph(rbn17)" value="Wygeneruj losową liczbę 1802-bitową i narysuj ją"/><br />
+				<input type="button" onclick="bin2arr()" value="Wykres z binarnego 'obrazka' &#x00A;&#65514;" /> <!-- &#8679; --> Przekształca liczbę binarną (17 rzędów po 106 cyfr w zapisie dwójkowym) na wykres. Przydatne do zaimportowania dwójkowego 'obrazka' z Excela, Calca, pliku *.txt itp.<br />
+				<input type="button" id="no_showSteps" onclick="showSteps()" value="Oblicz wartości pośrednie dla powyższej liczby"/><br /><br />
 				<div id="no_stepsDiv">
-					<span class="toggleButton" onclick="toggleDiv(&#39;no_steps&#39;);">[+] <strong>Intermediate values</strong></span>
+					<span class="toggleButton" onclick="toggleDiv('no_steps');">[+] <strong>Wartości pośrednie</strong></span>
 					<div id="no_steps" style="display:none"></div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<br>
-	<div style="text-align: center;">
-
-	
-	
+	<br />
+	<div style="text-align: center;">	
 	</div>
-	<br>
-	<br>
-	<input type="button" id="no_showSteps" onclick="generatePNG()" value="Generate image using graph and number above"> (first make sure that graph and number are consistent)
-	<input type="checkbox" id="includeFormula"> <label for="includeFormula">Include Tupper's formula?</label><br>
-	Respects axes inversion and thousands separation.
-	<br>
+	<br />
+	<br />
+	<input type="button" id="no_showSteps" onclick="generatePNG()" value="Utwórz obrazek z powyższym wykresem i liczbą"/> (najpierw upewnij się, że wykres i liczba są spójne)
+	<input type="checkbox" id="includeFormula"/> <label for="includeFormula">Dołączyć wzór Tuppera?</label><br />
+	Uwzględnia odwrócenie osi i rozdzielenie tysięcy.
+	<br />
 
 	<canvas id="canvas2" width="0" height="0" style="/*display:none*/">
-		Your browser does not support the HTML 5 Canvas. 
+		Twoja przeglądarka nie obsługuje HTML 5 Canvas. 
 	</canvas>
-	<a id="link2img" target="_blank" style="display:none">Link to image (open in a new window; doesn't seem to work with IE)</a>
-	<a id="link2img2" href="javascript:void()" onclick="openImgInNewWin()" style="display:none">Open image in a new window (for IE)</a>
-	<a id="linkWithNum" target="_blank" href="https://tuppers-formula.ovh/index.php" style="display:none">Link to this page with number</a>
-	<br>
-	<br>
+	<a id="link2img" target="_blank" style="display:none">Link do obrazka (otwiera się w nowym oknie, nie działa w IE)</a>
+	<a id="link2img2" href="javascript:void()" onclick="openImgInNewWin()" style="display:none">Otwórz obrazek w nowym oknie (dla IE)</a>
+	<a id="linkWithNum" target="_blank" href="" style="display:none">Link do tej strony wraz z liczbą</a>
+	<br />
+	<br />
 	<p style="text-align:right">
-		Created for <a href="http://takitamblog.tk/">takitamblog.tk</a><br>
-		View source code for more information...
+		Stworzone dla <a href="http://takitamblog.tk">takitamblog.tk</a>
+		Dodatkowe informacje w kodzie strony...
 	</p>
 	<!-- Copyleft, use HTML, JS & CSS code as you want. It would be nice if you leave or mention link to my mini blog, but it's not necessary :-)
 		 I will appreciate if you let me know about any modifications, upgrades, optimizations, ideas - you can send them to any e-mail in this domain -->
 	<!-- Yes, there is an easter egg :-) Need to focus and use correct keys -->
 	<!-- If you want to use this site offline, just save it on your local drive. Everything is in one file - except other language version(s) and favicon -->
+</body>
 </html>
