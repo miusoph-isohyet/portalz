@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tupper's Self-Referential Formula Playground</title>
+    <style>
+        body {
+            font-family: "Lucida Console", Monaco, monospace;
+            background: #ddd;
+            margin: 40px auto;
+            max-width: 80%;
+            line-height: 1.6;
+            font-size: 18px;
+            padding: 0 10px;
+        }
+        
+        @media (max-width: 800px) {
+            body {
+                max-width: 97%;
+            }
+        }
+        
+        body * {
+            font-family: "Lucida Console", Monaco, monospace;
+            line-height: 1.2;
+            color: #333;
+        }
+        
+        h1, h2, h3 {
+            line-height: 1.2;
+        }
+        
+        .title {
+            text-align: center;
+        }
+        
+        table {
+            border-spacing: 1px;
+        }
+        
+        textarea {
+            font-size: 9px;
+            width: 100%;
+            height: 40px;
+        }
+        
+        #grid {
+            position: absolute;
+            display: block;
+        }
+        
+        #grid-overlay {
+            position: relative;
+            border: 2px solid black;
+            display: inline-block;
+        }
+        
+        #presets * {
+            font-size: 0.8em;
+            margin: 0.3em;
+            padding: 0.3em;
+        }
+        
+        .hover {
+            background-color: rgba(0, 0, 0, 0.5) !important;
+        }
+        
+        .unselected {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .selected {
+            background-color: black;
+        }
+        
+        .error {
+            color: red;
+            font-size: 0.8rem;
+        }
+    </style>
+    <script src="utils/jquery.min.js" defer></script>
+    <script src="utils/bignumber.min.js" defer></script>
+    <script src="utils/keelys.js" defer></script>
+    <script>
+        $(function() {
+            const maxDecimal = new BigNumber("17").times(new BigNumber("2").exponentiatedBy(1802));
+            const presetsContainer = $("#presets");
+        
+            // Generate preset buttons
+            for (let i = 17; i <= maxDecimal; i += 17) {
+                const button = $("<button></button>").text(i.toString()).attr("dec", i.toString()).addClass("preset");
+                presetsContainer.append(button);
+            }
+        });
+    </script>
+</head>
+<body>
+    <h1 class="title">Tupper's Self-Referential Formula Playground</h1>
+    
+    <div>
+        <h2 class="title">Grid</h2>
+        <div id="grid"></div>
+    </div>
+    <div>
+        <p>
+            <label for="bitArea">Bit String:</label>
+            <input type="text" id="bitArea" size="100">
+        </p>
+        <p>
+            <label for="decArea">Decimal:</label>
+            <input type="text" id="decArea" size="100">
+        </p>
+        <p>
+            <label for="showCommas">Show Commas:</label>
+            <input type="checkbox" id="showCommas">
+        </p>
+                <p>
+            <label for="stringArea">Base-62 String:</label>
+            <textarea id="stringArea" placeholder="String" size="100" readonly></textarea>
+         </p>
+        <p>
+            <label for="wordsArea">Words:</label>
+            <textarea id="wordsArea" placeholder="Number as words" readonly></textarea>
+        </p>
+
+    </div>
+    <div>
+        <h2 class="title">Presets</h2>
+        <div id="presets">
+        
+        <button p=0 dec="0">
+        Clear</button>
+        <button p=2 dec="960939379918958884971672962127852754715004339660129306651505519271702802395266424689642842174350718121267153782770623355993237280874144307891325963941337723487857735749823926629715517173716995165232890538221612403238855866184013235585136048828693337902491454229288667081096184496091705183454067827731551705405381627380967602565625016981482083418783163849115590225610003652351370343874461848378737238198224849863465033159410054974700593138339226497249461751545728366702369745461014655997933798537483143786841806593422227898388722980000748404719">
+        Self-referencing</button><button p=0 dec="4858450636189713423582095962494202044581400587983244549483093085061934704708809928450644769865524364849997247024915119110411605739177407856919754326571855442057210445735883681829823754139634338225199452191651284348332905131193199953502413758765239264874613394906870130562295813219481113685339535565290850023875092856892694555974281546386510730049106723058933586052544096664351265349363643957125565695936815184334857605266940161251266951421550539554519153785457525756590740540157929001765967965480064427829131488548259914721248506352686630476300">
+        Upside Down/Mirrored</button><br><br<>
+            <button id="saveButton">Save JSON</button>
+            <input type="file" id="loadButton" name="file" />
+
+        
+            </div>
+    <div id="presetContainer">
+        <button id="startBtn">Start</button>
+        <button id="stopBtn">Stop</button>
+
+        </div>
+        
+<button id="saveValueBtn">Save Value</button>
+<button id="addSavedValueBtn">Add Saved Value</button>
+<button id="invertBitsButton">Invert Bits</button>
+
+   <button id="repeaterButton">Additive Series</button>
+    </div>
+    <!-- Modify your existing HTML with the following -->
+
+<button id="saveToArrayBtn">Save to Array</button>
+<button id="displayErrorBtn">Display Error</button>
+<button id="clearOldestValueBtn">Clear Oldest Value</button>
+<button id="playBtn">Play</button>
+<button id="stopBtn">Stop</button>
+
+
+ 
+
+    <br><br>
+<input type="text" id="keyField" placeholder="Encryption key">
+<button id="saveEncButton">Save Encrypted Array</button>
+
+<input type="file" id="loadEncButton" name="file" />
+
+
+
+
+
+
+    <div>
+        <h2 class="title">Error Messages</h2>
+        <p id="bitError" class="error"></p>
+        <p id="decError" class="error"></p>
+    </div>
+</body>
+</html>
