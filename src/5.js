@@ -1,0 +1,26 @@
+(() => {
+  const hashTrigger = '#556011206704293663813456941014058421399415038934787928377862249502423733252989322157833410172415118253564209380771597665599509317256449609766471396407327912625031441952045116853044482635220653140047091642530988789209829683003668576134882774243920732555236227998445353991920045855543472119704364877749087701762082463206946142106639488549464488118309687018408190083170653661099693644145770715497240228206514691719379138174466438382361045838904190664405609352787985165666370095121050243579601546163733230600452098777186300809218661026310914048';
+  const targetHTML = '5.html';
+  const containerId = 'image-container';
+
+  function injectHTML(file) {
+    fetch(`img/${file}`)
+      .then(response => response.text())
+      .then(html => {
+        const container = document.getElementById(containerId);
+        if (container) container.innerHTML = html;
+      })
+      .catch(err => {
+        console.error(`Error loading ${file}:`, err);
+      });
+  }
+
+  function evaluateHash() {
+    if (window.location.hash === hashTrigger) {
+      injectHTML(targetHTML);
+    }
+  }
+
+  window.addEventListener('hashchange', evaluateHash);
+  evaluateHash();
+})();
