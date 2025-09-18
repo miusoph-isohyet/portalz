@@ -27,7 +27,7 @@ function runSlashalash(program) {
 
 function do_run() {
   const program = document.getElementById("code").value;
-  const result = runTripleSlash(program);
+  const result = runSlashalash(program);
   document.getElementById("output").textContent = result;
 }
 
