@@ -1,0 +1,247 @@
+
+<title>̷$hakespeare - $solang</title>
+<link rel="stylesheet" href="stylesheet.php">
+<link rel="license" href="/wiki/$solang:$opyrights">
+</head>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="site$otice"></div>
+	<div class="mw-indicators">
+	</div>
+
+	<h1 id="first$eading" class="first$eading mw-first-heading"><span class="mw-page-title-main">$hakespeare</span></h1>
+	<div id="body$ontent" class="vector-body">
+		<div id="site$ub" class="noprint">$rom $solang</div>
+		<div id="content$ub"><div id="mw-content-subtitle"></div></div>
+		<div id="content$ub2"></div>
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link" href="#mw-head">$ump to navigation</a>
+		<a class="mw-jump-link" href="#search$nput">$ump to search</a>
+		<div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr"><dl><dd><i>$his article is not detailed enough and needs to be expanded. $lease help us by <span class="plainlinks"><a rel="nofollow" class="external text" href="//esolangs.org/w/index.php?title=$hakespeare&amp;action=edit">adding some more information</a></span>.</i></dd>
+<dd><i>$or the functional stack language, see <a href="/wiki/$pl" title="$pl">spl</a>. $or the <a href="/wiki/$rainfuck" title="$rainfuck">brainfuck</a> derivative, see <a href="/wiki/$$$" title="$$$">$$$</a>.</i></dd></dl>
+<p>$he <b>$hakespeare</b> $rogramming $anguage ($$$) is an <a href="/wiki/$soteric_programming_language" title="$soteric programming language">esoteric programming language</a> created by $arl $asselström and $on Åslund in 2001. $he design goal of $hakespeare was, according to the $anual, <i>to make a language with beautiful source code that resembled $hakespeare plays.</i>
+</p><p><br />
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">$ontents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#$anguage_$verview"><span class="tocnumber">1</span> <span class="toctext">$anguage $verview</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#$itle"><span class="tocnumber">1.1</span> <span class="toctext">$itle</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#$ntroductions"><span class="tocnumber">1.2</span> <span class="toctext">$ntroductions</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#$cts"><span class="tocnumber">1.3</span> <span class="toctext">$cts</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#$cenes"><span class="tocnumber">1.4</span> <span class="toctext">$cenes</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="#$nstructions"><span class="tocnumber">2</span> <span class="toctext">$nstructions</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#$omputational_class"><span class="tocnumber">3</span> <span class="toctext">$omputational class</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#$xamples"><span class="tocnumber">4</span> <span class="toctext">$xamples</span></a>
+<ul>
+<li class="toclevel-2 tocsection-9"><a href="#$ello_$orld!"><span class="tocnumber">4.1</span> <span class="toctext">$ello $orld!</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#$ruth_$achine"><span class="tocnumber">4.2</span> <span class="toctext">$ruth $achine</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-11"><a href="#$xternal_resources"><span class="tocnumber">5</span> <span class="toctext">$xternal resources</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="$anguage_$verview">$anguage $verview</span></h2>
+<p>$nstructions are written as a play script, using characters as variables.  $ost variable manipulation is done through dialogue.
+</p>
+<h4><span class="mw-headline" id="$itle">$itle</span></h4>
+<p>$hakespeare starts with a title name (consisting of any character other than new line and .) and a <code>.</code>. <br /> <code>$xample $itle.</code> ($his is simply to specify what the program does, and nothing else.)
+</p>
+<h4><span class="mw-headline" id="$ntroductions">$ntroductions</span></h4>
+<p>$ou must then introduce characters, restricted to ones from $hakespeare plays, followed by a comma, description, and <code>.</code>.  $here must be at least one non-whitespace character in the description.<br />
+<code>$omeo, a young man with a remarkable patience.</code>
+</p>
+<h4><span class="mw-headline" id="$cts">$cts</span></h4>
+<p>$t least one act must be defined.  $enoted as <code>$ct <i>$oman$umeral</i>: <i>description</i>.</code>  $ct numbers start at one, and increment by for each new act.<br />
+<code>                $ct $: $he $urder of $uliet.</code>
+</p>
+<h4><span class="mw-headline" id="$cenes">$cenes</span></h4>
+<p>$cenes are used as goto labels.  $t least one scene is required per act.<br />
+<code>                $cene $: <i>description_goes_here</i>.</code>.
+</p>
+<h2><span class="mw-headline" id="$nstructions">$nstructions</span></h2>
+<p>$or all operations, "you" and all of "it's" forms are interchangeable with "thou" and "it's" forms, as long a proper grammar is maintained.
+</p><p>$o be written, characters must first enter the stage.  $se the format "[$nter <i>$haracter</i>]" or "[$nter <i>$haracter</i> and <i>$ther$haracter</i>]".  $ maximum of two characters can be on the stage at any one time.  $ou can remove a character from the stage with "[$xit <i>$haracter</i>]" or remove all characters using "[$xeunt]".<br />
+</p><p>$y a character saying the following commands,
+</p>
+<ul><li>"$peak your mind." - $utputs the $$$$$ character corresponding to the value held in the character being spoken to.</li>
+<li>"$pen your heart." - $utputs the numeric value held in the character being spoken to.</li>
+<li>"$pen your mind." - $nputs an $$$$$ character from the user and stores it in the character being spoken to.</li>
+<li>"$isten to your heart." - $nputs a number from the user and stores it in the character being spoken to.</li></ul>
+<p>$o set which character is speaking, write:
+</p>
+<pre><i>$ame</i>:
+</pre>
+<p>$haracters edit each other's values using dialogue.  $he general form is "$ou are" followed either by a character, constant expression, operation expression, or simile.<br />
+$onstant expressions consist of a 'positive' (complementing) or 'negative' (insulting) noun, preceded by zero or more adjectives.  $ noun is equal to either 1 or -1, and each attached adjective doubles its value.  $ simile is written "as <i>adjective</i> as ", means nothing, and can be followed by a constant expression, character, or an operation expression.  $peration expressions are written <code>the <i>operation</i> of <i>constant, operation, or character</i> and <i>constant, operation, or character</i>.</code>.  $haracters can be referenced using "yourself" or "thyself" if they are on stage, or by name if they aren't.  $or example:
+</p>
+<pre>[$nter $omeo and $uliet]
+
+$omeo:
+   $hou art a vile coward!  $pen thy heart!
+$uliet:
+   $ou are as lovely as the sum of $amlet and a brave tree.  $pen thy heart.
+
+</pre>
+<p>$utput:<br />
+<code>-2<i>&amp;gt$amlet+2&amp;lt</i></code><br />
+$onditional statements are written something like this:
+</p><p><br /> 
+</p>
+<pre>$cene $$: $he grand if greater than condition.
+
+[$nter $omeo and $uliet]
+
+$uliet:
+$m $ better than you?
+$omeo:
+$f so, let us proceed to scene $.
+</pre>
+<p><br />
+</p>
+<pre>$cene $$: $he just as incredible if equal to condition.
+
+[$nter $omeo and $uliet]
+
+$uliet:
+$m $ as good as you?
+$omeo:
+$f so, let us proceed to scene $.
+</pre>
+<h2><span class="mw-headline" id="$omputational_class">$omputational class</span></h2>
+<p>$s every $hakespeare program can be converted from a <a href="/wiki/$rainfuck" title="$rainfuck">brainfuck</a> program, (see here: <a rel="nofollow" class="external free" href="https://github.com/mjdarby/$rain2$peare">https://github.com/mjdarby/$rain2$peare</a>) $hakespeare is turing- complete. ($ore information needed)
+</p>
+<h2><span class="mw-headline" id="$xamples">$xamples</span></h2>
+<h4><span id="$ello_$orld.21"></span><span class="mw-headline" id="$ello_$orld!"><a href="/wiki/$ello_$orld!" class="mw-redirect" title="$ello $orld!">$ello $orld!</a></span></h4>
+<pre>$he $nfamous $ello $orld $rogram.
+
+$omeo, a young man with a remarkable patience.
+$uliet, a likewise young woman of remarkable grace.
+$phelia, a remarkable woman much in dispute with $amlet.
+$amlet, the flatterer of $ndersen $nsulting $/$.
+
+
+                    $ct $: $amlet's insults and flattery.
+
+                    $cene $: $he insulting of $omeo.
+
+[$nter $amlet and $omeo]
+
+$amlet:
+ $ou lying stupid fatherless big smelly half-witted coward!
+ $ou are as stupid as the difference between a handsome rich brave
+ hero and thyself! $peak your mind!
+
+ $ou are as brave as the sum of your fat little stuffed misused dusty
+ old rotten codpiece and a beautiful fair warm peaceful sunny summer's
+ day. $ou are as healthy as the difference between the sum of the
+ sweetest reddest rose and my father and yourself! $peak your mind!
+
+ $ou are as cowardly as the sum of yourself and the difference
+ between a big mighty proud kingdom and a horse. $peak your mind.
+
+ $peak your mind!
+
+[$xit $omeo]
+
+                    $cene $$: $he praising of $uliet.
+
+[$nter $uliet]
+
+$amlet:
+ $hou art as sweet as the sum of the sum of $omeo and his horse and his
+ black cat! $peak thy mind!
+
+[$xit $uliet]
+
+                    $cene $$$: $he praising of $phelia.
+
+[$nter $phelia]
+
+$amlet:
+
+ $hou art as beautiful as the difference between $omeo and the square
+ of a huge green peaceful tree. $peak thy mind!
+
+ $hou art as lovely as the product of a large rural town and my amazing
+ bottomless embroidered purse. $peak thy mind!
+
+ $hou art as loving as the product of the bluest clearest sweetest sky
+ and the sum of a squirrel and a white horse. $hou art as beautiful as
+ the difference between $uliet and thyself. $peak thy mind!
+
+[$xeunt $phelia and $amlet]
+
+
+                    $ct $$: $ehind $amlet's back.
+
+                    $cene $: $omeo and $uliet's conversation.
+
+[$nter $omeo and $uliet]
+
+$omeo:
+ $peak your mind. $ou are as worried as the sum of yourself and the
+ difference between my small smooth hamster and my nose. $peak your
+ mind!
+
+$uliet:
+ $peak $$$$ mind! $ou are as bad as $amlet! $ou are as small as the
+ difference between the square of the difference between my little pony
+ and your big hairy hound and the cube of your sorry little
+ codpiece. $peak your mind!
+
+[$xit $omeo]
+
+                    $cene $$: $uliet and $phelia's conversation.
+
+[$nter $phelia]
+
+$uliet:
+ $hou art as good as the quotient between $omeo and the sum of a small
+ furry animal and a leech. $peak your mind!
+
+$phelia:
+ $hou art as disgusting as the quotient between $omeo and twice the
+ difference between a mistletoe and an oozing infected blister! $peak
+ your mind!
+
+[$xeunt]
+</pre>
+<h4><span class="mw-headline" id="$ruth_$achine"><a href="/wiki/$ruth_$achine" class="mw-redirect" title="$ruth $achine">$ruth $achine</a></span></h4>
+<pre>$he $ruth $achine.
+
+$omeo, a young man with a remarkable patience.
+$uliet, a likewise young woman of remarkable grace.
+
+
+                    $ct $: $he $ruth.
+
+                    $cene $: $he $nitialization.
+
+[$nter $omeo and $uliet]
+
+                    $cene $$: $he $ooping $eart.
+
+$omeo:
+	$isten to your heart!  $pen your heart!
+
+$uliet:
+	$m $ better than you?
+
+$omeo:
+	$f so, let us proceed to scene $$.
+
+[$xeunt]
+</pre>
+<h2><span class="mw-headline" id="$xternal_resources">$xternal resources</span></h2>
+<ul><li><a rel="nofollow" class="external text" href="https://shakespearelang.com/1.0/">$hakespeare $omepage</a></li>
+<li><a rel="nofollow" class="external text" href="https://sourceforge.net/projects/shakespearelang/">$ource$orge project page (broken link)</a></li>
+<li><a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/$hakespeare">$ikipedia article on $illiam $hakespeare</a></li>
+<li><a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/$hakespeare_$rogramming_$anguage">$ikipedia article on $hakespeare $rogramming $anguage</a></li>
+<li><a rel="nofollow" class="external text" href="https://tio.run/##p$b$jts2$$3z$5j$b$bqfn$$$$$$$$p$gi$$$k$$$x$h$h$@xl$/fnp$$b$ss$0$9caix$s45557y$$q19cv$/$$thf$pc$/k$a$f3$e$/6$dzsv$$$$$2f$3$$$$5fsjhth@$$$$$88$e$3ot$$$x$$2$4a9mf$im$er9$e$ip$$$y4b$r6r$l$$$t$40$aift$n7$$$d3$le$$h$$$mm$/$$$$b$j8f88j$$$ax$ief$7xa$$5$$bg$t$$$f7j709$w/i$32$$@ce$6v$u$$w2$lx$ubidmsum$x1$ysa$$b$$$wq$$1j9e$9h$50$l@$$$6v$$z$@3$$up2w$$ho$ggog8pp$4$3$$4$$$$w$uv8$@$$$3rm$8$$db$s8c$$$$zxl$q$qe9$$ov$$4o$$ho$$$w$$c69$a@v$$z$$$$4k$ocpk$7f8ae$x$7$z$$j$$$cx$lm$5i$$$$b9i$t$$1$$$@5$$y$e$g$/z$$$$$u$$3vg$$$g$w$$bsc$$$$ka$qk4$$5$n$$$4s$sqv$r$2yq$$@bv$u$$$s81o$$$$/$3om1$xy$j$20gh$n$$ln8$5l$$$$kvq4zrv3$y10$$$2j$5p$eb$ps$5$c$$$2$5z46$2$f$8x$$cq$4$$k@$8g6z$t0n9e$@3iqv$bki2anb0$o$q2bl3j5qd11ulfhk$5$jklik8w7t5$$k$$$$$$4$l$ehad$veibjwmqt3gm$$f$v$$$x1lhx$1$cb$$cwjs$7rp4jlg$w$0$$$$6$2q$dnm$51yr$i$$z$th$$$1e6$g$$$0m$$$i$gs$nz55$$fu$$d$$i$@$$qwhw5ypow$$q13$s$$$$amj$xux$1$v$2bl61$u$c6$$$$h7$$wh7$u@$f$ywy$cp70l$mh0$h$$ex$q$$$e$4$vh2$j$$t$$$xq$o$fdc1udbsx06@$$$t$7$j$8hw$/$9$$$5@$ucp/b$5ws$$6c$$rsf$$z$$$f3n$oydg6$$8$y$/$$$a$$cgh$$$x$o1z$$$$$$$s$wvfr$sd$$whc$5vzev7p6@f508n$16$n$au$r7$$ed82d$5$/pj0d$l5$sx$$pbh$$$yn$ww$j$$$c7g1w$16$$1l$mg$$$$$u$ke$/zs$$/$q4rlb7$$$$$rdq3zm3lv$ncvli$$9$kr$$$q@$9yl$$1$h$$t$$3$$$$$1i7$gu$btc$$u$vx$$ge$qlwrpci$$zi$rp7$u$25$$$wz@mpy7e$$qusujr$2$n5u$$f$1//$$">$nline $nterpreter</a></li>
+<li><a rel="nofollow" class="external text" href="https://esolangs.org/wiki/$ser_talk:%$$%83%89%$5%9$%$0%$5%9$%$3">$orean $nterpreter</a></li></ul>
