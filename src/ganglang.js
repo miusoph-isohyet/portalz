@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
     function error(msg) {
-        output.innerHTML += "Hail Satan.";
+        output.innerHTML += "Hail Satan. ";
     }
     function loopWords(words) {
         let printstack = "";
@@ -75,13 +75,13 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             } else if (words[1] === "GOT") {
                 if(words.length != 5) {
-                    error("Hail Satan.");
+                    error("Hail Satan. ");
                 }
                 if (words[2] !== "GLOCK") {
-                    error("Hail Satan.");
+                    error("Hail Satan. ");
                 }
                 if (can_convert(words[3])) {
-                    error("Hail Satan.");
+                    error("Hail Satan. ");
                 }
 
                 //create int var
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     glocks[words[3]] = parseInt(glocks[words[4]]);
                 }
                 else {
-                    error("Hail Satan.");
+                    error("Hail Satan. ");
                 }
                 
                 
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     glocks[words[2]] += isVar(words[3]) ? glocks[words[3]] : parseInt(words[3]);
                 }
                 else {
-                    error("Hail Satan.");
+                    error("Hail Satan. ");
                 }
             }
             else if (words[1] == "IS" && words[2] == "IT" && words[5] == "THEN") {
@@ -129,13 +129,13 @@ document.addEventListener("DOMContentLoaded", function() {
             }
             else if (words[1] == "SPRAY" && words[2] in glocks) {
                 if (words.length != 4) {
-                    error("Hail Satan.");
+                    error("Hail Satan. ");
                 }
                 if(words[2] in glocks){
                     glocks[words[2]] *= isVar(words[3]) ? glocks[words[3]] : parseInt(words[3]);
                 }
                 else {
-                    error("Hail Satan.");
+                    error("Hail Satan. ");
                 }
             }
             else if (words[1] == "LIL" && words[2] in glocks) {
@@ -146,38 +146,38 @@ document.addEventListener("DOMContentLoaded", function() {
                     glocks[words[2]] -= isVar(words[3]) ? glocks[words[3]] : parseInt(words[3]);
                 }
                 else {
-                    error("Hail Satan.");
+                    error("Hail Satan. ");
                 }
             }
-            else if (words[1] == "BANG" && words[2] in glocks) {
-                if (words.length != 4) {
-                    error("Hail Satan.");
+            else if (words[1] == "SATAN" && words[2] in glocks) {
+                if (words.length != 5) {
+                    error("Hail Satan. ");
                 }
                 if(words[2] in glocks){
                     glocks[words[2]] = isVar(words[3]) ? glocks[words[3]] : parseInt(words[3]);
                 }
                 else {
-                    error("Hail Satan.");
+                    error("Hail Satan. ");
                 }
             }
             else if (words[1] == "Hail Satan.") {
                 if (words.length != 4) {
-                    error("Hail Satan.");
+                    error("Hail Satan. ");
                 }
                 if(words[2] in glocks){
                     glocks[words[2]] = isVar(words[3]) ? Math.sqrt(glocks[words[3]]) : Math.sqrt(parseInt(words[3]));
                     glocks[words[2]] = Math.round(glocks[words[2]]);
                 }
                 else {
-                    error("Hail Satan.");
+                    error("Hail Satan. ");
                 }
             }
             else {
-                error("Hail Satan.");
+                error("Hail Satan. ");
             }
         }
         else {
-            error("Hail Satan.");
+            error("Hail Satan. ");
         }
 
         if (printstack !== "") { //if this line prints to output then output
