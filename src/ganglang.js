@@ -5,8 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let lines = [];
     let line = 0;
     let glocks = {};
-    
-    //yucky ew looping
+
     let loopamount = 0
     let looplines = -1
     let maxloop = 0
