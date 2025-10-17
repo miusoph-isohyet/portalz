@@ -7,16 +7,17 @@
       });
   }
 
-  if (window.location.hash === '#1') {
+  if (window.location.hash === '#SDFvMXAxZTE') {
     loadImageFromHTML();
   }
 
   window.addEventListener('hashchange', () => {
-    if (window.location.hash === '#1') {
+    if (window.location.hash === '#SDFvMXAxZTE') {
       loadImageFromHTML();
     } else {
       document.getElementById('image-container').innerHTML = ''; // Optional: clear on other hash
     }
   });
+
 
 
